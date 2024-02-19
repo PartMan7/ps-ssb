@@ -4,7 +4,7 @@ export interface SSBSet {
 	species: string;
 	ability: string | string[];
 	item: string | string[];
-	gender: GenderName;
+	gender: GenderName | GenderName[];
 	moves: (string | string[])[];
 	signatureMove: string;
 	evs?: {hp?: number, atk?: number, def?: number, spa?: number, spd?: number, spe?: number};
@@ -36,17 +36,29 @@ export const ssbSets: SSBSets = {
 	// Nature needs to be a valid nature with the first letter capitalized ex: Modest
 	*/
 	// Please keep sets organized alphabetically based on staff member name!
+	aegii: {
+		species: 'Scizor', ability: 'Unburden', item: 'Lansat Berry', gender: 'M',
+		moves: ['Acrobatics', 'Attack Order', ['Cross Chop', 'Night Slash']],
+		signatureMove: 'Equip Aegislash',
+		evs: {hp: 4, atk: 252, spe: 252}, nature: 'Adamant', teraType: 'Flying',
+	},
 	Aelita: {
 		species: 'Melmetal', ability: 'Fortified Metal', item: 'Leftovers', gender: '',
 		moves: ['Heavy Slam', 'Bitter Blade', 'Liquidation'],
 		signatureMove: 'Smelt',
 		evs: {hp: 252, atk: 4, spd: 252}, nature: 'Careful', teraType: 'Steel', shiny: true,
 	},
-	Aeonic: {
-		species: 'Nosepass', ability: 'Change Tempo', item: 'Fossilized Fish', gender: 'M',
-		moves: ['Ice Burn', 'Electro Drift', 'Milk Drink'],
-		signatureMove: 'Memes That Burn The Sky',
-		evs: {hp: 252, spa: 252, spd: 4}, ivs: {spe: 0}, nature: 'Quiet', teraType: 'Rock',
+	Alex: {
+		species: 'Sprigatito', ability: 'Pawprints', item: 'Eviolite', gender: '',
+		moves: ['Substitute', 'Protect', 'Magic Powder'],
+		signatureMove: 'Spicier Extract',
+		evs: {hp: 252, def: 4, spd: 252}, nature: 'Careful', teraType: 'Water',
+	},
+	aQrator: {
+		species: 'Totodile', ability: 'Neverending fHunt', item: 'Eviolite', gender: 'F',
+		moves: ['Whirlpool', 'Noble Roar', 'Slack Off'],
+		signatureMove: "Tori's Stori",
+		evs: {hp: 252, def: 4, spd: 252}, ivs: {atk: 0}, nature: 'Sassy', teraType: 'Fighting',
 	},
 	'A Quag To The Past': {
 		species: 'Quagsire', ability: 'Quag of Ruin', item: 'Leftovers', gender: 'M',
@@ -66,17 +78,17 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Quiver Dance',
 		evs: {spa: 252, spd: 4, spe: 252}, nature: 'Timid',
 	},
+	berry: {
+		species: 'Regirock', ability: 'Sturdy', item: 'Maranga Berry', gender: 'F',
+		moves: ['Curse', 'Salt Cure', 'Stone Axe'],
+		signatureMove: 'what kind',
+		evs: {hp: 252, atk: 4, spd: 252}, nature: 'Careful', teraType: 'Rock',
+	},
 	Blitz: {
 		species: 'Chi-Yu', ability: 'Blitz of Ruin', item: 'Life Orb', gender: 'N',
 		moves: ['Fiery Wrath', 'Lava Plume', 'Nasty Plot'],
 		signatureMove: 'Geyser Blast',
 		evs: {def: 4, spa: 252, spe: 252}, nature: 'Modest', teraType: 'Water', shiny: true,
-	},
-	BreadLoeuf: {
-		species: 'Dachsbun', ability: 'Painful Exit', item: 'Leftovers', gender: '',
-		moves: ['Wish', 'Rest', 'Play Rough'],
-		signatureMove: 'Baker\'s Douze Off',
-		evs: {hp: 252, def: 252, spd: 4}, nature: 'Impish', teraType: 'Fairy',
 	},
 	Cake: {
 		species: 'Dudunsparce-Three-Segment', ability: 'Not Enough Removal', item: 'Leftovers', gender: 'N',
@@ -92,16 +104,28 @@ export const ssbSets: SSBSets = {
 		evs: {hp: 252, def: 252, spd: 4}, nature: 'Impish', teraType: 'Ghost', shiny: 957,
 	},
 	Chloe: {
-		species: 'Tsareena', ability: 'Acetosa', item: 'Assualt Vest', gender: 'F',
+		species: 'Tsareena', ability: 'Acetosa', item: 'Assault Vest', gender: 'F',
 		moves: ['Rapid Spin', 'Fishious Rend', 'Stone Axe'],
 		signatureMove: 'De Todas las Flores',
 		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Jolly', teraType: 'Grass', shiny: true,
+	},
+	clerica: {
+		species: 'Mimikyu', ability: 'Masquerade', item: 'Ghostium Z', gender: 'F',
+		moves: ['Protect', 'Substitute', 'Phantom Force'],
+		signatureMove: 'Stockholm Syndrome',
+		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Jolly',
 	},
 	Coolcodename: {
 		species: 'Victini', ability: 'Firewall', item: 'Heavy-Duty Boots', gender: 'M',
 		moves: ['Searing Shot', 'Psychic', 'Dazzling Gleam'],
 		signatureMove: 'Haxer\'s Will',
 		evs: {spa: 252, spd: 4, spe: 252}, nature: 'Timid', teraType: 'Fairy', shiny: 1024,
+	},
+	'Cor\'Jon': {
+		species: 'Dachsbun', ability: 'Painful Exit', item: 'Leftovers', gender: '',
+		moves: ['Wish', 'Rest', 'Play Rough'],
+		signatureMove: 'Baker\'s Douze Off',
+		evs: {hp: 252, def: 252, spd: 4}, nature: 'Impish', teraType: 'Fairy',
 	},
 	'Dawn of Artemis': {
 		species: 'Necrozma', ability: 'Form Change', item: 'Expert Belt', gender: 'F',
@@ -127,7 +151,7 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Trivial Pursuit',
 		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Adamant', teraType: 'Poison',
 	},
-	Eli: {
+	Elly: {
 		species: 'Thundurus', ability: 'Storm Surge', item: 'Heavy-Duty Boots', gender: 'F',
 		moves: ['Wildbolt Storm', 'Sandsear Storm', 'Volt Switch'],
 		signatureMove: 'Sustained Winds',
@@ -144,6 +168,12 @@ export const ssbSets: SSBSets = {
 		moves: ['Astral Barrage', 'Moonblast', 'Substitute'],
 		signatureMove: 'Augur of Ebrietas',
 		evs: {spa: 252, spd: 4, spe: 252}, nature: 'Timid', teraType: 'Ghost',
+	},
+	HiZo: {
+		species: 'Zoroark-Hisui', ability: 'Martyr Complex', item: 'Heavy-Duty Boots', gender: 'M',
+		moves: ['Last Respects', 'Boomburst', 'Spirit Break'],
+		signatureMove: 'Scapegoat',
+		evs: {atk: 252, spa: 4, spe: 252}, nature: 'Naive', teraType: 'Fairy',
 	},
 	HoeenHero: {
 		species: 'Ludicolo', ability: 'Misspelled', item: 'Life Orb', gender: 'M',
@@ -176,22 +206,22 @@ export const ssbSets: SSBSets = {
 		evs: {hp: 252, spa: 4, spd: 252}, ivs: {atk: 0}, nature: 'Modest',
 	},
 	Isaiah: {
-		species: 'Stakataka', ability: 'Anchor Arms', item: 'Life Orb', gender: 'M',
-		moves: ['Trick Room', 'Hammer Arm', 'Wave Crash'],
-		signatureMove: 'Anchor Toss',
-		evs: {hp: 252, atk: 252, def: 4}, ivs: {atk: 0}, nature: 'Brave', teraType: 'Water', shiny: true,
+		species: 'Medicham', ability: 'Psychic Surge', item: 'Medichamite', gender: 'M',
+		moves: ['Close Combat', 'Knock Off', 'Triple Axel'],
+		signatureMove: 'Simple Gameplan',
+		evs: {atk: 252, def: 4, spe: 252}, nature: 'Jolly', shiny: true,
+	},
+	kenn: {
+		species: 'Larvitar', ability: 'Deserted Dunes', item: 'Eviolite', gender: 'M',
+		moves: ['Salt Cure', 'Shore Up', ['Precipice Blades', 'Headlong Rush']],
+		signatureMove: 'Stone Faced',
+		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Adamant', teraType: 'Rock', shiny: true,
 	},
 	Kennedy: {
 		species: 'Cinderace', ability: 'Anfield', item: 'Berserk Gene', gender: 'M',
 		moves: ['Blaze Kick', ['Triple Kick', 'Trop Kick'], 'U-turn'],
 		signatureMove: 'Hat-Trick',
 		evs: {atk: 252, def: 4, spe: 252}, nature: 'Jolly', teraType: 'Any',
-	},
-	kolochu: {
-		species: 'Pikachu', ability: 'Soul Surfer', item: 'Light Ball', gender: '',
-		moves: ['Thunder', 'Volt Switch', 'Bouncy Bubble'],
-		signatureMove: 'Hang Ten',
-		evs: {hp: 4, spa: 252, spe: 252}, nature: 'Timid', teraType: 'Water',
 	},
 	Kris: {
 		species: 'Nymble', ability: 'Cacophony', item: 'Heavy-Duty Boots', gender: 'N',
@@ -205,11 +235,23 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Attack of Opportunity',
 		evs: {hp: 252, atk: 252, spd: 4}, nature: 'Adamant', shiny: 1024,
 	},
-	Lalaya: {
-		species: 'Murkrow', ability: 'Workaholic', item: 'Loaded Dice', gender: 'F',
-		moves: ['Knock Off', 'Bone Rush', 'Flip Turn'],
-		signatureMove: 'Sugar Rush',
-		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Jolly', teraType: 'Fairy', shiny: true,
+	Lasen: {
+		species: 'Zekrom', ability: 'Idealized World', item: 'Leftovers', gender: 'M',
+		moves: ['Volt Switch', 'Fusion Bolt', 'Dragon Claw'],
+		signatureMove: 'Rise Above',
+		evs: {hp: 252, def: 4, spe: 252}, nature: 'Jolly', teraType: 'Fire',
+	},
+	Lily: {
+		species: 'Togedemaru', ability: 'Unaware', item: 'Leftovers', gender: 'F',
+		moves: ['Victory Dance', 'Plasma Fists', 'Meteor Mash'],
+		signatureMove: 'Recharge',
+		evs: {hp: 252, def: 4, spd: 252}, nature: 'Careful', teraType: 'Fairy', shiny: 1734,
+	},
+	Loethalion: {
+		species: 'Ralts', ability: 'Psychic Surge', item: 'Gardevoirite', gender: '',
+		moves: [['Esper Wing', 'Lumina Crash', 'Psychic Noise'], ['Agility', 'Calm Mind'], ['Draining Kiss', 'Matcha Gotcha']],
+		signatureMove: 'Darkmoon Cackle',
+		evs: {spa: 252, spd: 4, spe: 252}, ivs: {atk: 0}, nature: 'Timid', shiny: true,
 	},
 	Lumari: {
 		species: 'Ponyta-Galar', ability: 'Pyrotechnic', item: 'Eviolite', gender: 'F',
@@ -229,6 +271,12 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Breaking Change',
 		evs: {atk: 252, def: 4, spe: 252}, nature: 'Jolly', teraType: 'Ghost',
 	},
+	Meteordash: {
+		species: 'Tatsugiri', ability: 'Shadow Shield', item: 'Heavy-Duty Boots', gender: 'M',
+		moves: ['Fickle Beam', 'Scald', 'Glare'],
+		signatureMove: 'Plagiarism',
+		evs: {spa: 252, spd: 4, spe: 252}, ivs: {atk: 0}, nature: 'Timid', teraType: 'Steel',
+	},
 	Mex: {
 		species: 'Dialga', ability: 'Time Dilation', item: 'Adamant Orb', gender: 'N',
 		moves: ['Dragon Pulse', 'Flash Cannon', ['Aura Sphere', 'Volt Switch', 'Meteor Beam']],
@@ -241,11 +289,17 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Testing in Production',
 		evs: {atk: 252, spa: 4, spe: 252}, nature: 'Jolly',
 	},
-	neycwang: {
+	Ney: {
 		species: 'Banette', ability: 'Insomnia', item: 'Banettite', gender: 'M',
 		moves: ['Destiny Bond', 'Will-O-Wisp', 'Parting Shot'],
 		signatureMove: 'Shadow Dance',
 		evs: {hp: 252, atk: 252, def: 4}, ivs: {spe: 0}, nature: 'Brave', shiny: true,
+	},
+	Notater517: {
+		species: 'Incineroar', ability: 'Vent Crosser', item: 'Heavy-Duty Boots', gender: 'M',
+		moves: ['Ceaseless Edge', 'Pyro Ball', ['Rapid Spin', 'Encore']],
+		signatureMove: '~nyaa',
+		evs: {hp: 252, atk: 252, spd: 4}, nature: 'Adamant', teraType: 'Steel',
 	},
 	Peary: {
 		species: 'Klinklang', ability: 'Levitate', item: 'Pearyum Z', gender: '',
@@ -283,7 +337,7 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Purification',
 		evs: {hp: 252, def: 252, spd: 4}, nature: 'Bold', teraType: 'Water',
 	},
-	'sharp_claw': {
+	sharp_claw: {
 		species: 'Sneasel', ability: 'Regenerator', item: 'Heavy-Duty Boots', gender: 'F',
 		moves: ['Knock Off', 'Ice Spinner', 'Ice Shard'],
 		signatureMove: 'Treacherous Traversal',
@@ -295,13 +349,7 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Treacherous Traversal',
 		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Jolly', teraType: 'Poison', skip: 'sharp_claw',
 	},
-	'smely socks': {
-		species: 'Mimikyu', ability: 'Masquerade', item: 'Ghostium Z', gender: 'F',
-		moves: ['Protect', 'Substitute', 'Phantom Force'],
-		signatureMove: 'Stockholm Syndrome',
-		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Jolly',
-	},
-	'snake_rattler': {
+	snake: {
 		species: 'Fidgit', ability: 'Persistent', item: ['Mental Herb', 'Covert Cloak'], gender: 'M',
 		moves: ['Tailwind', 'Healing Wish', 'Taunt'],
 		signatureMove: 'Concept Relevant',
@@ -324,6 +372,12 @@ export const ssbSets: SSBSets = {
 		moves: ['Water Shuriken', 'Nasty Plot', 'Vacuum Wave'],
 		signatureMove: 'Stink Bomb',
 		evs: {hp: 252, def: 4, spa: 252}, nature: 'Modest', teraType: 'Water',
+	},
+	Teclis: {
+		species: 'Gallade', ability: 'Sharpness', item: 'Life Orb', gender: 'M',
+		moves: ['Sacred Sword', 'Psycho Cut', 'Leaf Blade'],
+		signatureMove: 'Rising Sword',
+		evs: {hp: 4, atk: 252, spe: 252}, nature: 'Adamant', teraType: 'Psychic',
 	},
 	Theia: {
 		species: 'Litwick', ability: 'Power Abuse', item: 'Eviolite', gender: 'F',
@@ -353,6 +407,12 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Wingover',
 		evs: {hp: 4, atk: 252, spe: 252}, nature: 'Adamant', teraType: 'Flying',
 	},
+	umowu: {
+		species: 'Pikachu', ability: 'Soul Surfer', item: 'Light Ball', gender: '',
+		moves: ['Thunder', 'Volt Switch', 'Bouncy Bubble'],
+		signatureMove: 'Hang Ten',
+		evs: {hp: 4, spa: 252, spe: 252}, nature: 'Timid', teraType: 'Water',
+	},
 	Venous: {
 		species: 'Mantine', ability: 'Concrete Over Water', item: 'Leftovers', gender: '',
 		moves: ['Scald', 'Roost', 'Clear Smog'],
@@ -360,16 +420,29 @@ export const ssbSets: SSBSets = {
 		evs: {hp: 248, def: 244, spd: 16}, nature: 'Calm', teraType: 'Normal', shiny: 5,
 	},
 	'Vio͜͡let': {
-		species: 'Iron Valiant', ability: 'Scarlet Aeonia', item: 'Auspicious Armor', gender: 'F',
-		moves: ['Bitter Blade', 'Cross Poison', 'No Retreat'],
-		signatureMove: 'Waterfowl Dance',
-		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Adamant', teraType: 'Fairy', shiny: true,
+		species: 'Ogerpon', ability: 'See No Evil, Hear No Evil, Speak No Evil', item: 'Berry Juice', gender: 'F',
+		moves: ['Crabhammer', 'Mighty Cleave', 'Fire Lash'],
+		signatureMove: 'building character',
+		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Jolly', teraType: 'Stellar',
+	},
+	WarriorGallade: {
+		species: 'Tropius', ability: 'Primeval Harvest', item: 'Starf Berry', gender: ['M', 'M', 'F'],
+		moves: ['Sunny Day', 'Natural Gift', ['Bitter Blade', 'Sappy Seed', 'Stored Power', 'Counter']],
+		signatureMove: 'Fruitful Longbow',
+		// eslint-disable-next-line max-len
+		evs: {hp: 184, atk: 112, def: 36, spd: 88, spe: 88}, ivs: {spa: 29}, nature: 'Impish', teraType: ['Dragon', 'Psychic', 'Fighting'], shiny: 20,
 	},
 	WigglyTree: {
 		species: 'Sudowoodo', ability: 'Tree Stance', item: 'Liechi Berry', gender: 'M',
 		moves: ['Victory Dance', 'Wood Hammer', 'Head Smash'],
 		signatureMove: 'Perfect Mimic',
 		evs: {atk: 252, def: 4, spe: 252}, nature: 'Adamant', teraType: 'Grass',
+	},
+	'XpRienzo ☑◡☑': {
+		species: 'Reshiram', ability: 'Turboblaze', item: 'Choice Scarf', gender: 'M',
+		moves: ['Draco Meteor', 'Volt Switch', 'Flash Cannon'],
+		signatureMove: 'Scorching Truth',
+		evs: {spa: 252, spd: 4, spe: 252}, nature: 'Modest', teraType: 'Fire',
 	},
 	'Yellow Paint': {
 		species: 'Rotom-Frost', ability: 'Yellow Magic', item: 'Chilan Berry', gender: 'N',
@@ -398,7 +471,8 @@ export class RandomStaffBrosTeams extends RandomTeams {
 		const team: PokemonSet[] = [];
 		const debug: string[] = []; // Set this to a list of SSB sets to override the normal pool for debugging.
 		const ruleTable = this.dex.formats.getRuleTable(this.format);
-		const monotype = ruleTable.has('sametypeclause') ? this.sample([...this.dex.types.names()]) : false;
+		const monotype = ruleTable.has('sametypeclause') ?
+			this.sample([...this.dex.types.names().filter(x => x !== 'Stellar')]) : false;
 
 		let pool = Object.keys(ssbSets);
 		if (debug.length) {
@@ -457,7 +531,7 @@ export class RandomStaffBrosTeams extends RandomTeams {
 			let teraType: string | undefined;
 			if (ssbSet.teraType) {
 				teraType = ssbSet.teraType === 'Any' ?
-					this.sample(this.dex.types.all().map(x => x.name)) :
+					this.sample(this.dex.types.names()) :
 					this.sampleIfArray(ssbSet.teraType);
 			}
 
